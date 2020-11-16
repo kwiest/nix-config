@@ -11,11 +11,15 @@ let
     rbenv init - | source
   '';
 
+  rustConfig = ''
+    set -x PATH $HOME/.cargo/bin $PATH
+  '';
+
   fishConfig = ''
     set -p fish_function_path ${pkgs.fish-foreign-env}/share/fish-foreign-env/functions
     fenv source ~/.nix-profile/etc/profile.d/nix.sh
     set -e fish_function_path[1]
-  '' + fzfConfig + rbenvConfig;
+  '' + fzfConfig + rbenvConfig + rustConfig;
 
 in
 {
