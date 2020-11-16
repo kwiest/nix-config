@@ -3,10 +3,12 @@
 let
   defaultPkgs = with pkgs; [
     any-nix-shell # Support fish or zsh with nix-shell
+    cargo         # Rust package manager
     gopls         # Go LSP
     nix-direnv    # Nix integration for direnv
     ripgrep       # Fast file search
     rnix-lsp      # Nix LSP
+    rustc         # Rust compiler
     tree
   ];
 
