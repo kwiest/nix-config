@@ -41,8 +41,8 @@ in
     alacritty = {
       enable = true;
       settings = {
-        dimensions.columns = 120;
-        dimensions.lines = 60;
+        dimensions.columns = 240;
+        dimensions.lines = 120;
 
         font = {
           size = 22;
